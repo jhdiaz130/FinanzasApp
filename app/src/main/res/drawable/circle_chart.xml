@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- BASE -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#EEEEEE"/>
+        </shape>
+    </item>
+
+    <!-- VERDE -->
+    <item android:top="20dp" android:left="20dp">
+        <shape android:shape="oval">
+            <solid android:color="#4CAF50"/>
+        </shape>
+    </item>
+
+    <!-- AZUL -->
+    <item android:bottom="20dp" android:right="20dp">
+        <shape android:shape="oval">
+            <solid android:color="#2196F3"/>
+        </shape>
+    </item>
+
+    <!-- AMARILLO -->
+    <item android:top="40dp" android:right="40dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFEB3B"/>
+        </shape>
+    </item>
+
+    <!-- NARANJA -->
+    <item android:bottom="40dp" android:left="40dp">
+        <shape android:shape="oval">
+            <solid android:color="#FF9800"/>
+        </shape>
+    </item>
+
+    <!-- MORADO -->
+    <item android:top="60dp" android:left="60dp">
+        <shape android:shape="oval">
+            <solid android:color="#9C27B0"/>
+        </shape>
+    </item>
+
+    <!-- MORADO CLARO -->
+    <item android:bottom="60dp" android:right="60dp">
+        <shape android:shape="oval">
+            <solid android:color="#CE93D8"/>
+        </shape>
+    </item>
+    <!-- CENTRO BLANCO (hueco) -->
+    <item
+        android:top="70dp"
+        android:bottom="70dp"
+        android:left="70dp"
+        android:right="70dp">
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF"/>
+        </shape>
+    </item>
+</layer-list>
