@@ -45,17 +45,7 @@ app/build/outputs/apk/debug/
 app-debug.apk
 Estructura del proyecto
 app/
-├── src/
- 
- │   ├── main/
- 
- │   │   ├── java/com/example/finanzasapp
- 
- │   │   ├── res/layout
- 
- │   │   ├── res/drawable
- 
- │   │   └── AndroidManifest.xml
+├── src/ │ ├── main/ │ │ ├── java/com/example/finanzasapp │ │ ├── res/layout │ │ ├── res/drawable │ │ └── AndroidManifest.xml
 
 # Autor
 
