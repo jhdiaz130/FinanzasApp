@@ -1,12 +1,12 @@
-FinanzasApp 📱
+# FinanzasApp 📱
 
 Este repositorio contiene el código fuente y la documentación de la aplicación FinanzasApp, desarrollada para la gestión de ingresos, gastos y presupuestos personales.
 
-Uso del proyecto
+# Uso del proyecto
 
 Este proyecto fue probado usando el SDK de Android versión 36.
 
-Con Android Studio
+# Con Android Studio
 
 Abra el proyecto en Android Studio.
 
@@ -19,17 +19,20 @@ Luego puede ejecutar la aplicación en:
 un emulador
 un dispositivo físico Android
 
-Desde la línea de comandos
+# Funcionalidades
 
-Para compilar el proyecto desde la terminal ejecute:
+La aplicación cuenta con los siguientes módulos:
 
-./gradlew assembleDebug
+Inicio de sesión
+Dashboard financiero
+Registro de ingresos y gastos
+Balance actual
+Visualización por categorías
+Presupuesto mensual
+Alertas de límite de gasto
+Agregar nuevas transacciones
 
-Esto generará el APK en la ruta:
-
-app/build/outputs/apk/debug/app-debug.apk
-
-Pruebas
+# Pruebas
 
 Puede ejecutar la aplicación instalando el APK generado en su dispositivo físico o en un emulador.
 
@@ -37,7 +40,7 @@ Ruta del APK:
 
 app/build/outputs/apk/debug/
 
-Archivo:
+# Archivo:
 
 app-debug.apk
 Estructura del proyecto
@@ -48,6 +51,7 @@ app/
  │   │   ├── res/layout
  │   │   ├── res/drawable
  │   │   └── AndroidManifest.xml
-Autor
+
+# Autor
 
 Jheiner Diaz
