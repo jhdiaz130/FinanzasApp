@@ -45,7 +45,7 @@ app/build/outputs/apk/debug/
 app-debug.apk
 Estructura del proyecto
 app/
- ├── src/
+├── src/
  
  │   ├── main/
  
