@@ -43,19 +43,20 @@ app/build/outputs/apk/debug/
 # Archivo:
 
 app-debug.apk
-Estructura del proyecto
+:
+
+
+## Estructura del proyecto
+
+
 app/
-
-├── src/
-│ ├── main/
-
-│ │ ├── java/com/example/finanzasapp
-
-│ │ ├── res/layout
-
-│ │ ├── res/drawable
-
-│ │ └── AndroidManifest.xml
+└── src/
+└── main/
+├── java/com/example/finanzasapp/
+├── res/
+│ ├── layout/
+│ └── drawable/
+└── AndroidManifest.xml
 
 # Autor
 
