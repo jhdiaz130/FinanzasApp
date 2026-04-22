@@ -46,7 +46,6 @@ app-debug.apk
 Estructura del proyecto
 app/
 ├── src/ 
-
 │ ├── main/ 
 
 │ │ ├── java/com/example/finanzasapp
