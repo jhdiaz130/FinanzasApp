@@ -48,7 +48,7 @@ app-debug.apk
 
 ## Estructura del proyecto
 
-
+```
 app/
 └── src/
 └── main/
@@ -57,7 +57,7 @@ app/
 │ ├── layout/
 │ └── drawable/
 └── AndroidManifest.xml
-
+```
 # Autor
 
 Jheiner Diaz
