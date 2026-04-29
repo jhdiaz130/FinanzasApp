@@ -10,34 +10,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinanzasApp">
-
-        <!-- NUEVA PANTALLA -->
-        <activity
-            android:name=".BudgetActivity"
-            android:exported="false" />
-
-        <!-- (SI YA TIENES ESTA, LA DEJAS) -->
         <activity
             android:name=".AddTransactionActivity"
             android:exported="false" />
-
-        <!-- DASHBOARD -->
+        <!-- NUEVA PANTALLA -->
+        <activity
+            android:name=".BudgetActivity"
+            android:exported="false" /> <!-- DASHBOARD -->
         <activity
             android:name=".DashboardActivity"
-            android:exported="false" />
-
-        <!-- PANTALLA PRINCIPAL -->
+            android:exported="false" /> <!-- PANTALLA PRINCIPAL -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
     </application>
 
 </manifest>
