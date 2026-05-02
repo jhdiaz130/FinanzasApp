@@ -9,7 +9,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -118,6 +117,14 @@
                     android:textSize="22sp"/>
             </LinearLayout>
 
+            <!-- 🔥 BOTÓN PARA VER GRÁFICA -->
+            <Button
+                android:id="@+id/btnVerGrafica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ver gráfica"
+                android:layout_marginBottom="16dp"/>
+
             <!-- MOVIMIENTOS -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -143,7 +150,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <!-- BOTÓN -->
+    <!-- BOTÓN FLOTANTE -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAdd"
         android:layout_width="wrap_content"

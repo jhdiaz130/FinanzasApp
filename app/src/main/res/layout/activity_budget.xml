@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:background="#F5F5F5"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- HEADER AZUL -->
-        <!-- HEADER AZUL OSCURO -->
+        <!-- HEADER -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
@@ -28,16 +28,17 @@
                 android:layout_height="24dp"
                 android:src="@android:drawable/ic_media_previous"
                 app:tint="#FFFFFF"
-                android:layout_marginEnd="12dp"/>
+                android:layout_marginEnd="12dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Presupuesto de Comida"
-                android:textSize="25sp"
+                android:text="Presupuesto"
+                android:textSize="22sp"
                 android:textStyle="bold"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFFFFF" />
         </LinearLayout>
+
         <!-- CONTENIDO -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -59,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:text="Límite Mensual: $400,000"
                     android:textStyle="bold"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginBottom="8dp" />
 
                 <ProgressBar
                     android:layout_width="match_parent"
@@ -67,14 +68,14 @@
                     android:progress="95"
                     android:max="100"
                     style="?android:attr/progressBarStyleHorizontal"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginBottom="8dp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="$380,000 / $400,000"
                     android:textStyle="bold"
-                    android:layout_marginBottom="12dp"/>
+                    android:layout_marginBottom="12dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -83,16 +84,7 @@
                     android:background="@drawable/card_red"
                     android:textColor="#FFFFFF"
                     android:padding="10dp"
-                    android:gravity="center"
-                    android:layout_marginBottom="12dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Editar Presupuesto"
-                    android:textColor="#2196F3"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"/>
+                    android:gravity="center" />
             </LinearLayout>
 
             <!-- GRAFICA -->
@@ -109,12 +101,12 @@
                     android:layout_height="wrap_content"
                     android:text="Distribución de Gastos"
                     android:textStyle="bold"
-                    android:layout_marginBottom="12dp"/>
+                    android:layout_marginBottom="12dp" />
 
                 <com.github.mikephil.charting.charts.PieChart
                     android:id="@+id/pieChart"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"/>
+                    android:layout_height="250dp" />
             </LinearLayout>
 
             <!-- FILTROS -->
@@ -130,59 +122,55 @@
                     android:layout_height="wrap_content"
                     android:text="Filtro de Fechas"
                     android:textStyle="bold"
-                    android:layout_marginBottom="12dp"/>
+                    android:layout_marginBottom="12dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="3">
 
+                    <!-- ESTE MES -->
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMes"
                         android:layout_width="0dp"
                         android:layout_height="48dp"
                         android:layout_weight="1"
-                        android:text="Este Mes"
+                        android:text="Mes"
                         android:textSize="12sp"
-                        android:gravity="center"
-                        android:textAlignment="center"
                         android:textAllCaps="false"
-                        android:includeFontPadding="false"
-                        android:padding="0dp"
                         android:textColor="#000000"
-                        android:background="@drawable/button_filter"
-                        app:backgroundTint="@null"/>
+                        app:cornerRadius="12dp"
+                        app:backgroundTint="#E0E0E0" />
 
+                    <!-- ESTA SEMANA -->
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSemana"
                         android:layout_width="0dp"
                         android:layout_height="48dp"
                         android:layout_weight="1"
-                        android:text="Esta Semana"
+                        android:text="Semana"
                         android:textSize="12sp"
-                        android:gravity="center"
-                        android:textAlignment="center"
                         android:textAllCaps="false"
-                        android:includeFontPadding="false"
-                        android:padding="0dp"
                         android:layout_marginStart="8dp"
                         android:textColor="#000000"
-                        android:background="@drawable/button_filter"
-                        app:backgroundTint="@null"/>
+                        app:cornerRadius="12dp"
+                        app:backgroundTint="#E0E0E0" />
 
+                    <!-- RANGO -->
                     <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRango"
                         android:layout_width="0dp"
                         android:layout_height="48dp"
                         android:layout_weight="1"
                         android:text="Rango"
                         android:textSize="12sp"
-                        android:gravity="center"
-                        android:textAlignment="center"
                         android:textAllCaps="false"
-                        android:includeFontPadding="false"
-                        android:padding="0dp"
                         android:layout_marginStart="8dp"
                         android:textColor="#000000"
-                        android:background="@drawable/button_filter"
-                        app:backgroundTint="@null"/>
+                        app:cornerRadius="12dp"
+                        app:backgroundTint="#E0E0E0" />
+
                 </LinearLayout>
 
             </LinearLayout>

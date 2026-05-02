@@ -26,4 +26,10 @@
 
     <string name="agregar">Agregar</string>
 
+    <string name="monto">Monto</string>
+    <string name="categoria">Categoría</string>
+    <string name="ingreso">Ingreso</string>
+    <string name="gasto">Gasto</string>
+    <string name="guardar">Guardar</string>
+
 </resources>

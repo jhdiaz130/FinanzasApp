@@ -10,51 +10,61 @@
         android:id="@+id/etMonto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Monto"
-        android:inputType="number" />
+        android:hint="@string/monto"
+        android:inputType="number"
+        android:autofillHints="amount"
+        android:layout_marginTop="100dp"/>
 
     <!-- CATEGORIA -->
     <EditText
         android:id="@+id/etCategoria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Categoría"
+        android:hint="@string/categoria"
+        android:inputType="text"
+        android:autofillHints="name"
         android:layout_marginTop="12dp" />
 
-    <!-- 🔥 SELECTOR INGRESO / GASTO -->
+    <!-- SELECTOR -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="16dp"
+        style="?android:attr/buttonBarStyle">
 
         <Button
             android:id="@+id/btnIngreso"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="Ingreso"
+            android:text="@string/ingreso"
             android:textColor="#FFFFFF"
-            android:background="@drawable/button_green" />
+            android:background="@drawable/button_selector"
+            android:elevation="6dp"/>
 
         <Button
             android:id="@+id/btnGasto"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="Gasto"
+            android:text="@string/gasto"
             android:textColor="#FFFFFF"
-            android:background="@drawable/button_blue"
-            android:layout_marginStart="8dp" />
+            android:background="@drawable/button_selector"
+            android:layout_marginStart="8dp"
+            android:elevation="6dp"/>
 
     </LinearLayout>
 
-    <!-- BOTON GUARDAR -->
+    <!-- GUARDAR -->
     <Button
         android:id="@+id/btnGuardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar"
-        android:layout_marginTop="20dp" />
+        android:text="@string/guardar"
+        android:layout_marginTop="20dp"
+        android:elevation="6dp"/>
 
 </LinearLayout>
