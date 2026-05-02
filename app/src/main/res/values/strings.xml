@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">FinanzasApp</string>
 
     <string name="logo_desc">Logo</string>
@@ -9,7 +10,6 @@
 
     <string name="login">Iniciar Sesión</string>
     <string name="register">Registrarse</string>
-
     <string name="forgot_password">¿Olvidaste tu contraseña?</string>
 
     <!-- Dashboard -->
@@ -17,12 +17,13 @@
     <string name="ingresos_mes">Ingresos del Mes</string>
     <string name="gastos_mes">Gastos del Mes</string>
     <string name="balance_actual">Balance Actual</string>
-    <string name="grafica">Gastos por Categoría</string>
     <string name="movimientos">Últimos Movimientos</string>
 
-    <string name="mov1">+ $500,000  Sueldo   24 Mayo</string>
-    <string name="mov2">- $100,000  Transporte   23 Mayo</string>
-    <string name="mov3">- $80,000  Comida   22 Mayo</string>
+    <!-- VALORES (ESTO SOLUCIONA TU ERROR) -->
+    <string name="valor_ingresos">$2,100,000</string>
+    <string name="valor_cero">$0</string>
+    <string name="valor_balance">$850,000</string>
 
     <string name="agregar">Agregar</string>
+
 </resources>
