@@ -22,7 +22,7 @@
     <!-- VALORES (ESTO SOLUCIONA TU ERROR) -->
     <string name="valor_ingresos">$2,100,000</string>
     <string name="valor_cero">$0</string>
-    <string name="valor_balance">$850,000</string>
+    <string name="valor_balance">$0</string>
 
     <string name="agregar">Agregar</string>
 

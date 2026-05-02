@@ -11,16 +11,23 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 class DashboardActivity : AppCompatActivity() {
 
     private lateinit var tvGastos: TextView
-    private lateinit var tvBalance: TextView // 👈 NUEVO
+    private lateinit var tvIngresos: TextView
+    private lateinit var tvBalance: TextView
     private lateinit var container: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // 🔥 CARGAR DATOS
+        DataManager.load(this)
+
         setContentView(R.layout.activity_dashboard)
 
         val fab = findViewById<FloatingActionButton>(R.id.fabAdd)
+
         tvGastos = findViewById(R.id.tvGastosMes)
-        tvBalance = findViewById(R.id.tvBalance) // 👈 NUEVO
+        tvIngresos = findViewById(R.id.tvIngresosMes)
+        tvBalance = findViewById(R.id.tvBalance)
         container = findViewById(R.id.containerMovimientos)
 
         fab.setOnClickListener {
@@ -31,27 +38,31 @@ class DashboardActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        actualizarUI()
+    }
+
+    private fun actualizarUI() {
 
         var totalGastos = 0
-        var totalIngresos = 0 // 👈 NUEVO
+        var totalIngresos = 0
 
         container.removeAllViews()
 
-        for (t in DataManager.transactions) {
+        for ((index, t) in DataManager.transactions.withIndex()) {
 
-            // 🔹 SUMAR
             if (t.tipo == "gasto") {
                 totalGastos += t.monto
             } else {
                 totalIngresos += t.monto
             }
 
-            // 🔹 CREAR ITEM VISUAL
             val textView = TextView(this)
 
             val signo = if (t.tipo == "ingreso") "+" else "-"
 
-            textView.text = "$signo $${t.monto}  ${t.categoria}"
+            // 🔥 AQUÍ ESTÁ LO QUE BUSCABAS (CON FECHA)
+            textView.text = "$signo $${t.monto} | ${t.categoria} | ${t.fecha}"
+
             textView.textSize = 16f
 
             if (t.tipo == "ingreso") {
@@ -60,13 +71,21 @@ class DashboardActivity : AppCompatActivity() {
                 textView.setTextColor(Color.parseColor("#F44336"))
             }
 
+            // 🔥 ELIMINAR + GUARDAR
+            textView.setOnLongClickListener {
+                DataManager.transactions.removeAt(index)
+                DataManager.save(this)
+                actualizarUI()
+                true
+            }
+
             container.addView(textView)
         }
 
-        // 🔹 ACTUALIZAR TOTALES
-        tvGastos.text = "$$totalGastos"
+        val balance = totalIngresos - totalGastos
 
-        val balance = totalIngresos - totalGastos // 👈 NUEVO
-        tvBalance.text = "$$balance" // 👈 NUEVO
+        tvGastos.text = "$$totalGastos"
+        tvIngresos.text = "$$totalIngresos"
+        tvBalance.text = "$$balance"
     }
 }

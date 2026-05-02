@@ -1,12 +1,12 @@
 package com.example.finanzasapp
 
-import android.content.Intent // 👈 AGREGADO
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
-import android.widget.Button // 👈 AGREGADO
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -14,10 +14,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //CARGAR DATOS GUARDADOS
+        DataManager.load(this)
+
         setContentView(R.layout.activity_main)
 
         val titulo = findViewById<TextView>(R.id.titulo)
-        val loginButton = findViewById<Button>(R.id.btnLogin) // 👈 AGREGADO
+        val loginButton = findViewById<Button>(R.id.btnLogin)
 
         // TEXTO CON COLORES
         val texto = "FinanzasApp"
@@ -43,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         titulo.text = spannable
 
-        // 👇 ESTO ES LO NUEVO (NAVEGACIÓN)
+        // NAVEGACIÓN
         loginButton.setOnClickListener {
             val intent = Intent(this, DashboardActivity::class.java)
             startActivity(intent)
