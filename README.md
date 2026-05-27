@@ -19,7 +19,7 @@ Aplicación móvil desarrollada en Android para la gestión de finanzas personal
 
 ## ⚙️ Tecnologías utilizadas
 
-- Kotlin
+- kotlin
 - Android Studio
 - Gradle
 - GitHub Actions (CI/CD)
@@ -77,3 +77,4 @@ app/
 ## 👤 Autor
 
 - Jheiner Diaz
+- Valentina Acero
